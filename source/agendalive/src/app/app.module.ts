@@ -14,12 +14,15 @@ import {MatTabsModule} from '@angular/material/tabs';
 import {MatCardModule} from '@angular/material/card';
 import {HttpClientModule} from "@angular/common/http";
 import {FlexModule} from "@angular/flex-layout/typings/esm5/flex";
+import { LocalDateTimePipe } from './shared/pipe/local-date-time.pipe';
+import {MatChipsModule} from "@angular/material/chips";
 
 @NgModule({
   declarations: [
     AppComponent,
     HomeComponent,
-    LiveListComponent
+    LiveListComponent,
+    LocalDateTimePipe
   ],
   imports: [
     HttpClientModule,
@@ -31,9 +34,12 @@ import {FlexModule} from "@angular/flex-layout/typings/esm5/flex";
     MatButtonModule,
     MatTabsModule,
     MatCardModule,
-    FlexModule
+    FlexModule,
+    MatChipsModule
   ],
-  providers: [],
+  providers: [
+    LocalDateTimePipe
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
