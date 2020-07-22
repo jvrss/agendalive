@@ -18,6 +18,10 @@ import { LocalDateTimePipe } from './shared/pipe/local-date-time.pipe';
 import {MatChipsModule} from "@angular/material/chips";
 import { LiveFormDialogComponent } from './views/home/live-form-dialog/live-form-dialog.component';
 import {MatDialogModule} from '@angular/material/dialog';
+import {MatInputModule} from "@angular/material/input";
+import {MatNativeDateModule} from "@angular/material/core";
+import {FormsModule, ReactiveFormsModule} from "@angular/forms";
+import {MatDatepickerModule} from "@angular/material/datepicker";
 
 @NgModule({
   declarations: [
@@ -39,7 +43,12 @@ import {MatDialogModule} from '@angular/material/dialog';
     MatCardModule,
     FlexModule,
     MatChipsModule,
-    MatDialogModule
+    MatDialogModule,
+    MatInputModule,
+    MatDatepickerModule,
+    MatNativeDateModule,
+    FormsModule,
+    ReactiveFormsModule
   ],
   providers: [
     LocalDateTimePipe
